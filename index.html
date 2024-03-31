@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+
+<body>
+    <header>
+        <div class="top-nav">
+            <div class="nav-left">
+                <a href="#">
+                    <li class="btnLink">إتصل بنا</li>
+                </a>
+                <a href="#">
+                    <li>مساعدة و معلومات</li>
+                </a>
+            </div>
+            <div class="nav-right">
+                <a href="#">
+                    <li>المقالات</li>
+                </a>
+                <a href="#">
+                    <li>الأكسسوارات</li>
+                </a>
+                <a href="#">
+                    <li>احدث الخيول</li>
+                </a>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="nav-left">
+                <a href="#">
+                    <li>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </div>
+                        تسجيل الدخول
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                        </div>
+                        بحث
+                    </li>
+                </a>
+            </div>
+            <div class="nav-right">
+                <a href="#">
+                    <li>
+                        <button  class="openModalBtn cssbuttons-io-button">
+                            حط إعلانك
+                            <div class="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </div>
+                        </button>
+                    </li>
+                </a>
+                <a href="#">
+                    <img class="logo" src="https://khayli.ma/assets/images/logo.png" alt="logo" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="mainTitle">
+                <h1>مرحبا بكم في سوق <span class="title"> الخيل </span> الرقمي</h1>
+                <p>
+                    الموقع الأول في المغرب ديال إعلانات الخيول في المغرب تقدر تشري وتبيع
+                    الخيول ديالك والإكسسوارات ديال الخيل هنا
+                </p>
+            </div>
+
+            <div class="searchForm">
+                <img src="./horse-riding.png" class="effectHors" />
+                <img src="./horse (3).png" class="effectHors2" />
+                <img src="./equestrian.png" class="effectHors3" />
+                <img src="./horse (4).png" class="effectHors4" />
+                <div class="group">
+                    <input required="" type="text" class="input" />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>علاش كتبحت ؟</label>
+                </div>
+                <div class="group">
+                    <select name="type" id="options">
+                        <option value="" selected></option>
+                        <option value="material">إكسسوارات</option>
+                        <option value="horses">الخيول</option>
+                    </select>
+                    <label>إكسسوارات / الخيل </label>
+                </div>
+                <div class="selectItems1" id="item1content">
+                    <div class="custom-select selector1">
+                        <p>سلالة الحصان</p>
+                        <button onclick="toggleDropdown()" class="select-btn">
+                            سلالة الخيل
+                        </button>
+                        <div id="dropdown" class="dropdown-content">
+                            <a onclick="selectOption('all')" data-value="all">جميع السلالات</a>
+                            <a onclick="selectOption('barbar')" data-value="barbar">الحصان البربري <img
+                                    src="./horse.png" alt="Barbar" /></a>
+                            <a onclick="selectOption('arabian')" data-value="arabian">الحصان العربي الأصيل <img
+                                    src="horse (1).png" alt="Arabian" /></a>
+                            <a onclick="selectOption('andalos')" data-value="andalos">الحصان الأندلسي <img
+                                    src="horse (2).png" alt="Andalos" /></a>
+                        </div>
+                    </div>
+
+                    <div class="selector1">
+                        <p>الحالة القانونية للحصان</p>
+                        <select class="selectInput">
+                            <option value="" selected disabled></option>
+                            <option value="paper">بالاوراق</option>
+                            <option value="noPaper">بدون أوراق</option>
+                        </select>
+                    </div>
+
+                    <div class="selector1">
+                        <p>عمر الحصان</p>
+                        <select class="selectInput">
+                            <option value="" selected disabled></option>
+                            <option value="all">جميع الأعمار</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="+10">+10</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="selectItems2" id="item2content">
+                    <div class="selector1">
+                        <p>الحالة</p>
+                        <select class="selectInput">
+                            <option value="" selected disabled></option>
+                            <option value="new">جديد</option>
+                            <option value="old">مستعمل</option>
+                        </select>
+                    </div>
+
+                    <div class="selector1">
+                        <p>النوع</p>
+                        <select class="selectInput">
+                            <option value="" selected disabled></option>
+                            <option value="all">جميع الإكسسوارات</option>
+                            <option value="لجام ">لجام</option>
+                            <option value="سروج ">سروج</option>
+                            <option value="بنادق ">بنادق</option>
+                            <option value="خناجر  ">خناجر</option>
+                            <option value="ملابس  ">ملابس</option>
+                            <option value="العلف  ">العلف</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <select name="type" id="options">
+                        <option value="" selected disabled></option>
+                        <option value="all">جميع المدن</option>
+                        <option value="Agadir">أكادير</option>
+                        <option value="Casablanca">الدار البيضاء</option>
+                        <option value="Rabat">الرباط</option>
+                        <option value="Fes">فاس</option>
+                        <option value="Marrakech">مراكش</option>
+                        <option value="Tangier">طنجة</option>
+                        <option value="Meknes">مكناس</option>
+                        <option value="Oujda">وجدة</option>
+                        <option value="Kenitra">القنيطرة</option>
+                        <option value="Tetouan">تطوان</option>
+                        <option value="Sale">سلا</option>
+                        <option value="Ouarzazate">ورزازات</option>
+                        <option value="El Jadida">الجديدة</option>
+                        <option value="Essaouira">الصويرة</option>
+                        <option value="Nador">الناظور</option>
+                        <option value="Beni Mellal">بني ملال</option>
+                        <option value="Taroudant">تارودانت</option>
+                        <option value="Al Hoceima">الحسيمة</option>
+                        <option value="Taza">تازة</option>
+                    </select>
+                    <label>المدينة</label>
+                </div>
+
+                <button class="searchBtn">بحت</button>
+            </div>
+        </section>
+
+        <section class="new-ads">
+            <h2 class="titleSection">إعلانات <span class="title">الخيل</span>   </h2>
+            <div class="owl-carousel owl-theme adsContainer">
+                <!-- single ads -->
+                <div class="card">
+                    <div class="thumbnail" style="background-image: url(./assets/header.jpg);">
+                        <button class="showMore">عرض</button>
+                    </div>
+                    <div class="detailsCard">
+                        <p class="type">الحصان العربي الأصيل</p>
+                        <h3 class="name">جذع للبيع</h3>
+                        <h3 class="price">5000dh</h3>
+                        <div class="details">
+                            <p>الرباط</p>
+                            <p>2024-02-02</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- single ads -->
+                <div class="card">
+                    <div class="thumbnail" style="background-image: url(./assets/khayl1.jpeg);">
+                        <button class="showMore">عرض</button>
+                    </div>
+                    <div class="detailsCard">
+                        <p class="type">الحصان العربي الأصيل</p>
+                        <h3 class="name">حصان للبيع </h3>
+                        <h3 class="price">10000dh</h3>
+                        <div class="details">
+                            <p>الرباط</p>
+                            <p>2024-02-02</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- single ads -->
+                <div class="card">
+                    <div class="thumbnail"style="background-image: url(./assets/pexels-photo-171256.jpeg);">
+                        <button class="showMore">عرض</button>
+                    </div>
+                    <div class="detailsCard">
+                        <p class="type">الحصان العربي الأصيل</p>
+                        <h3 class="name">تمن مناسب </h3>
+                        <h3 class="price">9000dh</h3>
+                        <div class="details">
+                            <div>
+                                
+                                <p>الرباط</p>
+                            </div>
+                            <div>
+                                <p>2024-02-02</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single ads -->
+                <div class="card">
+                    <div class="thumbnail" style="background-image: url(./assets/pexels-photo-2123375.jpeg);">
+                        <button class="showMore">عرض</button>
+                    </div>
+                    <div class="detailsCard">
+                        <p class="type">الحصان بربري </p>
+                        <h3 class="name">عربية بربرية </h3>
+                        <h3 class="price">58000dh</h3>
+                        <div class="details">
+                            <p>الرباط</p>
+                            <p>2024-02-02</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-nav">
+                <button class="owl-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                <button class="owl-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="moreButton">
+                <button>عرض المزيد </button>
+            </div>
+        </section>
+
+        <section class="startAd">
+            <h2>انشر إعلانك </h2>
+            <p> يمكنك نشر اعلاناتك مجانا  </p>
+            <button class="openModalBtn">انشر</button>
+        </section>
+
+                    <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>إختر هدفك من الأعلان</h2>
+                <div class="modalCards">
+                <div class="cardModal">
+                    <img src="./assets/sellHorse.png">
+                    <p>بيع حصان </p>
+                </div>
+                <div class="cardModal">
+                    <img src="./assets/saddle.png">
+                    <p>  إكسسوارات  </p>
+                </div>
+                <div class="cardModal">
+                    <img src="./assets/doctor.png">
+                    <p>  بيطري   </p>
+                </div>
+                <div class="cardModal">
+                    <img src="./assets/horseshoe.png">
+                    <p>  سمار    </p>
+                </div>
+                <div class="cardModal">
+                    <img src="./assets/horse-riding (1).png">
+                    <p>مروض خيول</p>
+                </div>
+                <div class="cardModal">
+                    <img src="./assets/stable.png">
+                    <p>مربي  خيول </p>
+                </div>
+                </div>
+                <button>التالي </button>
+            </div>
+            </div>
+
+
+
+
+    </main>
+    <script src="./main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.adsContainer').owlCarousel({
+                loop: true,
+
+                nav: false,
+                dots: false,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 2
+                    }
+                }
+            });
+        });
+        $('.owl-prev').click(function () {
+            $('.adsContainer').trigger('prev.owl.carousel');
+        });
+        $('.owl-next').click(function () {
+            $('.adsContainer').trigger('next.owl.carousel');
+        });
+    </script>
+</body>
+
+</html>

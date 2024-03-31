@@ -1,0 +1,689 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+:root {
+  --mainColor: #3f5620;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Droid Arabic Kufi", "Arial", sans-serif;
+}
+body {
+  height: 500vh;
+}
+
+.top-nav {
+  width: 100%;
+  height: 33px;
+  background-color: #222328;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.top-nav div,
+.navbar div {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.top-nav div a,
+.navbar div a {
+  text-decoration: none;
+}
+.top-nav div a li,
+.navbar div a li {
+  list-style: none;
+  color: white;
+  font-size: 14px;
+}
+.btnLink {
+  width: 68px;
+  height: 28px;
+  text-align: center;
+  background-color: var(--mainColor);
+  border-radius: 3px;
+}
+.navbar {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 160px;
+  padding-right: 160px;
+  background-color: white;
+}
+.navbar div a li {
+  color: black;
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon {
+  width: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  width: 200px;
+  height: 50px;
+}
+
+.cssbuttons-io-button {
+  background: var(--mainColor);
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #4d6a27;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  animation: shadowBtn 1s ease-in-out infinite alternate;
+}
+@keyframes shadowBtn {
+  from {
+    box-shadow: var(--mainColor) 0px 7px 29px 0px;
+  }
+  to {
+    box-shadow: var(--mainColor) 0px 10px 50px;
+  }
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em var(--mainColor);
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: var(--mainColor);
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+/* hero */
+
+.hero {
+  background-image: url("./assets/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* color: white; */
+}
+
+.mainTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+  color: white;
+}
+.mainTitle h1 {
+  font-size: 40px;
+}
+.title {
+  color: var(--mainColor);
+}
+.searchForm {
+  width: 60%;
+  height: fit-content;
+  padding: 10px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+  margin-top: 80px;
+  background-color: #f5f6f9;
+  border-radius: 10px;
+  box-shadow: #e9e9e946 0px 10px 50px;
+
+  position: relative;
+}
+.effectHors {
+  position: absolute;
+  top: -50px;
+  left: 10%;
+  width: 50px;
+}
+.effectHors2 {
+  position: absolute;
+  top: -50px;
+  left: 80%;
+  width: 50px;
+}
+.effectHors3 {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 50px;
+}
+.effectHors4 {
+  position: absolute;
+  top: -50px;
+  left: 30%;
+  width: 50px;
+}
+
+.group {
+  position: relative;
+  width: 90%;
+}
+.group2 {
+  position: relative;
+  width: 30%;
+}
+.input,
+select {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #515151;
+  direction: rtl;
+  border-radius: 5px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+label {
+  color: #5f5f5f;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  right: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label,
+.input:valid ~ label,
+select:focus ~ label,
+select:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: var(--mainColor);
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: var(--mainColor);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+.input:focus ~ .bar:before,
+.input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: var(--mainColor);
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.selectItems1,
+.selectItems2 {
+  width: 100%;
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.selector1 {
+  width: 30%;
+  text-align: right;
+}
+.selector1 button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.selectInput {
+  width: 100%;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.select-btn {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+}
+#dropdown a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#dropdown a img {
+  width: 25px;
+}
+
+.searchBtn {
+  background-color: var(--mainColor);
+  color: white;
+  border: 2px solid var(--mainColor);
+  width: 40%;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.searchBtn:hover {
+  background-color: transparent;
+  color: var(--mainColor);
+}
+.new-ads {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  position: relative;
+}
+.titleSection {
+  text-align: right;
+  padding: 40px;
+  font-size: 30px;
+}
+.adsContainer {
+  width: 100%;
+  overflow: hidden;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  gap: 20px;
+}
+.card {
+  width: 500px;
+  height: 250px;
+  box-shadow: whitesmoke 0px 7px 29px 0px;
+  border-radius: 5px;
+  display: flex;
+  cursor: pointer;
+}
+.card .thumbnail {
+  width: 50%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+}
+
+.showMore {
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--mainColor);
+  background-color: var(--mainColor);
+  color: white;
+  cursor: pointer;
+  transition: 0.5s all;
+  display: none;
+  box-shadow: 0 0 50px var(--mainColor);
+}
+.card .thumbnail:hover .showMore {
+  display: block;
+}
+.showMore:hover {
+  background-color: transparent;
+  color: var(--mainColor);
+}
+
+.detailsCard {
+  width: 50%;
+  direction: rtl;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  position: relative;
+  padding-right: 30px;
+}
+.detailsCard .type {
+  color: var(--mainColor);
+  font-size: medium;
+}
+.detailsCard .details {
+  display: flex;
+}
+
+.detailsCard .name {
+  font-size: 25px;
+  width: 100%;
+}
+.detailsCard .name:hover {
+  color: var(--mainColor);
+}
+.price {
+  font-size: 20px;
+}
+.details {
+  position: absolute;
+  bottom: 10px;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.details div {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+}
+.custom-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  bottom: 55%;
+}
+.custom-nav button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  z-index: 80;
+  font-size: 10px;
+  background-color: var(--mainColor);
+  color: white;
+  border: 1px solid var(--mainColor);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.moreButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:40px;
+}
+.moreButton button{
+    width: 15%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid var(--mainColor);
+    background-color: var(--mainColor);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s all;
+    box-shadow: 0 0 50px var(--mainColor);
+}
+
+.startAd {
+  width: 100%;
+  height: 50vh;
+  background-image: url(./assets/longSide.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  gap: 20px;
+  backdrop-filter: blur(50px);
+}
+.startAd h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.startAd p {
+  font-size: large;
+}
+.startAd button {
+  width: 15%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--mainColor);
+  background-color: var(--mainColor);
+  color: white;
+  cursor: pointer;
+  transition: 0.5s all;
+  box-shadow: 0 0 50px var(--mainColor);
+}
+.startAd button:hover , .moreButton button:hover {
+  background-color: transparent;
+  color: var(--mainColor);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.modal-content h2 {
+  text-align: center;
+}
+.modal-content button {
+  width: 15%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--mainColor);
+  background-color: var(--mainColor);
+  color: white;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.modal-content button:hover {
+  background-color: transparent;
+  color: var(--mainColor);
+}
+.close {
+  color: #aaa;
+  right: 20px;
+  top: 5px;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modalCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Card Styles */
+.cardModal {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--mainColor);
+  cursor: pointer;
+  transition: 0.5s all;
+  border-radius: 5px;
+}
+
+.cardModal img {
+  width: 50px;
+}
+.selected {
+  background-color: var(--mainColor);
+  color: white;
+}
+
+/* Button Styles */
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
