@@ -1,4 +1,7 @@
-@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url('./font/Droid\ Arabic\ Kufi\ Regular.ttf') format('truetype');
+  }
 
 :root {
   --mainColor: #3f5620;
