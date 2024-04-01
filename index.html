@@ -12,9 +12,10 @@
 
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-
+    
 <body>
     <header>
+
         <div class="top-nav">
             <div class="nav-left">
                 <a href="#">
@@ -36,7 +37,7 @@
                 </a>
             </div>
         </div>
-        <div class="navbar">
+        <div class="navbar" id="navbar">
             <div class="nav-left">
                 <a href="#">
                     <li>
@@ -214,6 +215,11 @@
                 <button class="searchBtn">بحت</button>
             </div>
         </section>
+        <section class="aboutUs">
+            <h1 >من <span class="title">نحن</span></h1>
+            <p>في سوق الخيول في المغرب، تُعتبر شركة "خيلي" من بين الشركات الرائدة التي تقدم خدماتها على مدار الساعة. تتميز "خيلي" بتوفير مجموعة واسعة من الخيول عالية الجودة لعملائها، سواء كانوا يبحثون عن خيول للبيع أو للتأجير أو لأغراض أخرى. تقدم الشركة خدماتها الممتازة على مدار الساعة، مما يجعلها الوجهة المثالية لعشاق الخيول في المغرب الذين يبحثون عن الجودة والموثوقية.
+            </p>
+        </section>
 
         <section class="new-ads">
             <h2 class="titleSection">إعلانات <span class="title">الخيل</span>   </h2>
@@ -309,6 +315,138 @@
             <p> يمكنك نشر اعلاناتك مجانا  </p>
             <button class="openModalBtn">انشر</button>
         </section>
+        <section class="benifetSection">
+            <h2 class="titleSection">لماذا  <span class="title">خيلي</span>   </h2>
+            <div class="containerBenifetCards">
+                <div class="benifetCards"> 
+                    <p>المصداقية</p>
+                </div>
+                <div class="benifetCards"> 
+                    <p>الخبرة</p>
+                </div>
+                <div class="benifetCards"> 
+                    <p>التقة المتبادلة</p>
+                </div>
+                <div class="benifetCards"> 
+                    <p>الامان</p>
+                </div>
+                <div class="benifetCards"> 
+                    <p>المعرفة</p>
+                </div>
+                <div class="benifetCards"> 
+                    <p>الهمزة</p>
+                </div>
+            </div>
+        </section>
+        <section class="processSection">
+            <h2 class="titleSection">خطوات   <span class="title">البيع</span>   </h2>
+            <div class="processCards">
+                <div class="processCard">
+                    <div class="indecator">1</div>
+                    <h3>تسجيل الدخول</h3>
+                    <p>يتم استلام الملفات المراد تنفيذها من عملائنا ثم قراءه الموضوع بشكل جيد</p>
+                </div>
+                <div class="processCard">
+                    <div class="indecator">2</div>
+                    <h3> رفع معلومات إعلانك</h3>
+                    <p>يتم استلام الملفات المراد تنفيذها من عملائنا ثم قراءه الموضوع بشكل جيد</p>
+                </div>
+                <div class="processCard">
+                    <div class="indecator">3</div>
+                    <h3>تسجيل الدخول</h3>
+
+                    <p>يتم استلام الملفات المراد تنفيذها من عملائنا ثم قراءه الموضوع بشكل جيد</p>
+                </div>
+                <div class="processCard">
+                    <div class="indecator">4</div>
+                    <h3>تسجيل الدخول</h3>
+
+                    <p>يتم استلام الملفات المراد تنفيذها من عملائنا ثم قراءه الموضوع بشكل جيد</p>
+                </div>
+                <div class="processCard">
+                    <div class="indecator">5</div>
+                    <h3>تسجيل الدخول</h3>
+
+                    <p>يتم استلام الملفات المراد تنفيذها من عملائنا ثم قراءه الموضوع بشكل جيد</p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="testimonealSection">
+            <h2 class="titleSection">حقائق و  <span class="title">أرقام</span>   </h2>
+
+            <div class="numbersCards">
+                <div class="singleNmCard">
+                    <img src="/assets/eye.png" />
+                    <h2> +1000 </h2>
+                    <p>زائر </p>
+                </div>
+                <div class="singleNmCard">
+                    <img src="/assets/ad.png" />
+                    <h2> +500 </h2>
+                    <p>إعلان </p>
+                </div>
+                <div class="singleNmCard">
+                    <img src="/assets/agent.png" />
+                    <h2> +1500 </h2>
+                    <p>معلن </p>
+                </div>
+                <div class="singleNmCard">
+                    <img src="/assets/help-desk.png" />
+                    <h2> 24/7 </h2>
+                    <p>الدعم </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faqSection">
+            <h2 class="titleSection"> الأسئلة   <span class="title">الشائعة</span>   </h2>
+            <div class="containerfq">
+                <div class="accordion">
+                  <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">ما هي الخدمات التي يقدمها خيلي؟</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                      <p> يقدم خيلي مجموعة من الخدمات المصممة خصيصًا لهواة الخيل، بما في ذلك بيع الخيول، وتأجيرها، وتدريبها، ورعايتها.                        .</p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">كيف يمكنني شراء خيل من خلال خيلي؟</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                      <p>يُسهل شراء الخيل من خلال خيلي. يمكنك تصفح الخيول المتاحة على موقعنا الإلكتروني، والتواصل مع فريق المبيعات للاستفسار، وتحديد موعد لمقابلة الخيل، ومتابعة عملية الشراء.</p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">هل تقدم خيلي مرافق الإيواء للخيول؟</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                      <p>نعم، يقدم خيلي مرافق إيواء ممتازة للخيول. تشمل مرافقنا أقفاصًا واسعة، ونزهة يومية، وأعلاف عالية الجودة، ورعاية متفانية من طاقم ذو خبرة.</p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">هل يقدم خيلي خدمات تدريب الخيل؟</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                      <p> نعم، يقدم خيلي خدمات تدريب الخيل المهنية مصممة حسب احتياجات كل خيل وفارس. يعمل مدربونا ذوو الخبرة مع خيول جميع المستويات والتخصصات</p>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title"> ما الذي يجب علي توفيره لزيارة خيلي؟</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                      <p>لزيارتك لخيلي، نوصي بارتداء ملابس مناسبة، بما في ذلك الأحذية المغلقة والملابس المريحة. قد ترغب أيضًا في إحضار دفتر ملاحظات وقلم لتدوين أي أسئلة أو ملاحظات خلال زيارتك.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+
+
+
+
+
+
+
+
 
                     <!-- The Modal -->
             <div id="myModal" class="modal">

@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'Droid Arabic Kufi';
-    src: url('./font/Droid\ Arabic\ Kufi\ Regular.ttf') format('truetype');
-  }
+  font-family: "Droid Arabic Kufi";
+  src: url("./font/Droid\ Arabic\ Kufi\ Regular.ttf") format("truetype");
+}
 
 :root {
   --mainColor: #3f5620;
@@ -14,7 +14,7 @@
   font-family: "Droid Arabic Kufi", "Arial", sans-serif;
 }
 body {
-  height: 500vh;
+  height: 900vh;
 }
 
 .top-nav {
@@ -60,6 +60,7 @@ body {
   padding-left: 160px;
   padding-right: 160px;
   background-color: white;
+  z-index: 10000;
 }
 .navbar div a li {
   color: black;
@@ -217,6 +218,23 @@ body {
   top: -50px;
   left: 30%;
   width: 50px;
+}
+.aboutUs {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  margin-top: 150px;
+  background-color: #f7f7f7;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+.aboutUs h1 {
+}
+.aboutUs p {
+  width: 60%;
 }
 
 .group {
@@ -403,13 +421,24 @@ select:valid ~ label {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 50px;
   position: relative;
 }
 .titleSection {
   text-align: right;
   padding: 40px;
   font-size: 30px;
+  position: relative;
+}
+.titleSection::after {
+  content: "";
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 5%;
+  height: 6px;
+  border-radius: 10px;
+  background-color: var(--mainColor);
 }
 .adsContainer {
   width: 100%;
@@ -536,18 +565,18 @@ select:valid ~ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:40px;
+  margin-top: 40px;
 }
-.moreButton button{
-    width: 15%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 2px solid var(--mainColor);
-    background-color: var(--mainColor);
-    color: white;
-    cursor: pointer;
-    transition: 0.5s all;
-    box-shadow: 0 0 50px var(--mainColor);
+.moreButton button {
+  width: 15%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--mainColor);
+  background-color: var(--mainColor);
+  color: white;
+  cursor: pointer;
+  transition: 0.5s all;
+  box-shadow: 0 0 50px var(--mainColor);
 }
 
 .startAd {
@@ -584,7 +613,8 @@ select:valid ~ label {
   transition: 0.5s all;
   box-shadow: 0 0 50px var(--mainColor);
 }
-.startAd button:hover , .moreButton button:hover {
+.startAd button:hover,
+.moreButton button:hover {
   background-color: transparent;
   color: var(--mainColor);
 }
@@ -689,4 +719,257 @@ select:valid ~ label {
 
 .btn:hover {
   background-color: #45a049;
+}
+
+.benifetSection {
+  width: 100%;
+  height: 60vh;
+  background-color: #f7f7f7;
+  margin-top: 100px;
+}
+.containerBenifetCards,
+.processCards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.benifetCards {
+  width: 250px;
+  padding: 15px;
+  border: 2px solid var(--mainColor);
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+}
+
+.benifetCards::before {
+  content: "";
+  height: 100%;
+  width: 10%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--mainColor);
+  transition: 0.5s all;
+  border-radius: 5px;
+}
+.benifetCards::after {
+  content: "";
+  height: 100%;
+  width: 10%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--mainColor);
+  transition: 0.5s all;
+  border-radius: 5px;
+}
+
+.benifetCards:hover::before,
+.benifetCards:hover::after {
+  width: 0%;
+}
+
+.benifetCards:hover .benifetCards p {
+  position: absolute;
+  z-index: 1;
+  color: white;
+}
+
+.processCard {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.processSection {
+  padding: 10px;
+  margin-top: 100px;
+}
+.processCards {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.indecator {
+  width: 60px;
+  height: 60px;
+  border: 3px solid var(--mainColor);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 25px;
+}
+
+.indecator::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -6px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-left: 5px solid var(--mainColor);
+  transform: rotate(-30deg);
+  -webkit-animation: rotate 1.1s infinite linear;
+  animation: rotate 1.1s infinite linear alternate;
+  box-sizing: content-box;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.testimonealSection {
+  margin-top: 100px;
+  background-color: #f7f7f7;
+}
+.numbersCards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 30px;
+}
+.singleNmCard {
+  width: 250px;
+  height: 230px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+.singleNmCard h2 {
+  font-weight: 500;
+  color: var(--mainColor);
+  text-align: center;
+  font-size: 30px;
+}
+.singleNmCard p {
+  text-align: center;
+  font-size: large;
+}
+.singleNmCard img {
+  width: 70px;
+}
+
+.containerfq {
+  padding: 4rem;
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion .accordion-item button[aria-expanded="true"] {
+  border-bottom: 1px solid var(--mainColor);
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: var(--mainColor);
+}
+.accordion button:hover::after,
+.accordion button:focus::after {
+  cursor: pointer;
+  color: var(
+    --mainColor
+  );
+  border: 1px solid var(--mainColor);
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded="true"] {
+  color: var(--mainColor);
+}
+.accordion button[aria-expanded="true"] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded="true"] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
 }
