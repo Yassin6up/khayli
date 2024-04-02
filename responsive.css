@@ -1,0 +1,126 @@
+/* small pc and tablet */
+@media (max-width: 900px) {
+  .navbar,
+  .top-nav {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* phone */
+@media (max-width: 610px) {
+  .openModalBtn,
+  .loginBtn {
+    display: none !important;
+  }
+  .searchForm {
+    width: 80%;
+  }
+  .Menu {
+    display: block !important;
+    cursor: pointer;
+  }
+  /* .nav-right{
+        display: none ; 
+    } */
+  .navbar div {
+    gap: 0;
+  }
+  .top-nav {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 30px;
+    text-align: right;
+    transform: translate(100%);
+    transition: 0.5s all;
+  }
+  .openMenu {
+    transform: translate(0%);
+  }
+
+  .top-nav div {
+    flex-direction: column-reverse;
+    gap: 0;
+    align-items: flex-end;
+    width: 100%;
+  }
+  .top-nav div a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-nav div a li {
+    font-size: 25px;
+  }
+  .top-nav div a {
+    transition: 0.5s all;
+    padding: 10px;
+    border-bottom: 2px solid var(--mainColor);
+    width: 100%;
+  }
+  .top-nav div a svg {
+    display: block;
+    width: 30px;
+    color: white;
+  }
+  .logoMenu {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 100px;
+  }
+  .btnClose {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: fit-content;
+    cursor: pointer;
+  }
+  .btnClose svg {
+    width: 50px;
+    color: var(--mainColor);
+  }
+  .top-nav div a li:hover {
+    color: var(--mainColor);
+  }
+  .btnLink {
+    width: 100%;
+    background-color: transparent;
+    height: fit-content;
+    text-align: right;
+  }
+
+  .categorysSlides div {
+    width: 378px;
+  }
+  .titleSection {
+    text-align: center;
+  }
+
+  .titleSection::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 30%;
+    bottom: 30px;
+    left: 50%;
+    translate: -50%;
+  }
+}
+
+/* larg pc */
+@media (min-width: 1000px) {
+  .Menu {
+    display: none;
+    cursor: pointer;
+  }
+}

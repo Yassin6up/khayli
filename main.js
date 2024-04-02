@@ -6,8 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
       loaderWrapper.style.display = "none"
     });
 });
-
-
+const menu = document.getElementById("menuSection")
+document.getElementById("menuIcon").onclick= ()=>{
+    menu.classList.add("openMenu")
+}
+document.getElementById('closeMenu').onclick= ()=>{
+    menu.classList.remove("openMenu")
+}
 
 
 function toggleDropdown() {

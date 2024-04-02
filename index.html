@@ -5,35 +5,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+  <!-- Include Slick theme CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
 
         <link rel="stylesheet" href="./Droid Arabic Kufi Regular/Droid Arabic Kufi Regular.ttf">
 
     <link rel="stylesheet" href="style.css" />
     <title>Khayli</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    
+    <link rel="stylesheet" href="responsive.css">
 <body>
     <header>
 
-        <div class="top-nav">
+        <div class="top-nav" id="menuSection">
+            <span class="btnClose" id="closeMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                </span>
+            <img class="logoMenu" src="https://khayli.ma/assets/images/logo.png" alt="logo" />
+
             <div class="nav-left">
                 <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25" />
+                      </svg>
                     <li class="btnLink">إتصل بنا</li>
                 </a>
                 <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25" />
+                      </svg>
                     <li>مساعدة و معلومات</li>
                 </a>
             </div>
             <div class="nav-right">
                 <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25" />
+                      </svg>
                     <li>المقالات</li>
                 </a>
                 <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25" />
+                      </svg>
                     <li>الأكسسوارات</li>
                 </a>
                 <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25" />
+                      </svg>
                     <li>احدث الخيول</li>
                 </a>
             </div>
@@ -41,7 +64,7 @@
         <div class="navbar" id="navbar">
             <div class="nav-left">
                 <a href="#">
-                    <li>
+                    <li class="loginBtn">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-6 h-6">
@@ -84,6 +107,12 @@
                 <a href="#">
                     <img class="logo" src="https://khayli.ma/assets/images/logo.png" alt="logo" />
                 </a>
+            </div>
+
+            <div class="Menu" style="display: none;">
+                <div class="menuIcon" id="menuIcon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" stroke="#000000" fill="none" stroke-linejoin="round" stroke-width="1.125" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><path d="M19 7L5 7.00002M19 12H5M19 17L5 17"></path></svg>
+                </div>
             </div>
         </div>
     </header>
@@ -229,7 +258,7 @@
 
         <section class="new-ads">
             <h2 class="titleSection">إعلانات <span class="title">الخيل</span>   </h2>
-            <div class="owl-carousel owl-theme adsContainer">
+            <div class=" adsContainer">
                 <!-- single ads -->
                 <div class="card">
                     <div class="thumbnail" style="background-image: url(./assets/header.jpg);">
@@ -330,16 +359,43 @@
                         
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="thumbnail" style="background-image: url(./assets/fristian.jpg);">
+                        <div class="showMore">معروض</div>
+                    </div>
+                    <div class="detailsCard">
+                        <p class="type">الحصان الفريزيان</p>
+                        <h3 class="name">حصان جميل </h3>
+                        <div class="mapPart">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+                            </svg>
+                          
+                            <p>الجديدة</p>
+                    </div>
+                    <div class="mapPart">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        <p>5 أبريل 2024 </p>
+                    </div>
+                        <h3 class="price">90000dh</h3>
+                        
+                    </div>
+                </div>
+
+
             </div>
 
             <div class="custom-nav">
-                <button class="owl-prev">
+                <button class="slick-prev">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                     </svg>
                 </button>
-                <button class="owl-next">
+                <button class="slick-next">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -654,6 +710,72 @@
             </div>
           </section>
 
+          <section class="ourBlogSection">
+            <h2 class="titleSection"> تصفح   <span class="title">مجلتنا</span>   </h2>
+
+            <div class="containerBlog" dir="rtl">
+                <div class="cardBLOG">
+                  <div class="card__header">
+                    <img src="./assets/fristian.jpg" alt="card__image" class="card__image" width="600">
+                  </div>
+                  <div class="card__body">
+                    <span class="tag tag-blue">المواسم</span>
+                    <h4>موسم بن جرير </h4>
+                    <p>النص البديل</p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="user">
+                      <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">
+                      <div class="user__info">
+                        <h5>Jane Doe</h5>
+                        <small>منذ 2 ساعة</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cardBLOG">
+                  <div class="card__header">
+                    <img src="./assets/trainer.jpg" alt="card__image" class="card__image" width="600">
+                  </div>
+                  <div class="card__body">
+                    <span class="tag tag-brown">الطعام</span>
+                    <h4>أهم المأكولات الصحية </h4>
+                    <p>النص البديل</p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="user">
+                      <img src="https://i.pravatar.cc/40?img=2" alt="user__image" class="user__image">
+                      <div class="user__info">
+                        <h5>Jony Doe</h5>
+                        <small>أمس</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cardBLOG">
+                  <div class="card__header">
+                    <img src="./assets/pexels-photo-171256.jpeg" alt="card__image" class="card__image" width="600">
+                  </div>
+                  <div class="card__body">
+                    <span class="tag tag-red">الخيول</span>
+                    <h4>السلالة العربية </h4>
+                    <p>النص البديل</p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="user">
+                      <img src="https://i.pravatar.cc/40?img=3" alt="user__image" class="user__image">
+                      <div class="user__info">
+                        <h5>John Doe</h5>
+                        <small>منذ 2 أيام</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+          </section>
+
           <!-- footer -->
           <footer class="footer">
             <div class="container">
@@ -758,35 +880,78 @@
 
     </main>
     <script src="./main.js"></script>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Owl Carousel JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.adsContainer').owlCarousel({
-                loop: true,
-                center: true,                
-                nav: false,
-                dots: false,
-                autoplay: true,
-                responsive: {
-                    600:{
-                        items: 1
-                    } , 
-                    1000:{
-                        items : 3
-                    },
-                    1200:{
-                        items : 4
+    <!-- Include Slick.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
+       <script>
+            $(document).ready(function () {
+            $('.adsContainer').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4,
+                        infinite: true,
                     }
-                }
-            });
-        });
-        $('.owl-prev').click(function () {
-            $('.adsContainer').trigger('prev.owl.carousel');
-        });
-        $('.owl-next').click(function () {
-            $('.adsContainer').trigger('next.owl.carousel');
+                    },
+                    {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+        
+        //     $('.adsContainer').owlCarousel({
+        //         loop: true,
+        //         center: true,                
+        //         nav: false,
+        //         dots: false,
+        //         autoplay: true,
+        //         responsive: {
+        //             600:{
+        //                 items: 1
+        //             } , 
+        //             1000:{
+        //                 items : 3
+        //             },
+        //             1200:{
+        //                 items : 4
+        //             }
+        //         }
+        //     });
+        // });
+        // $('.owl-prev').click(function () {
+        //     $('.adsContainer').trigger('prev.owl.carousel');
+        // });
+        // $('.owl-next').click(function () {
+        //     $('.adsContainer').trigger('next.owl.carousel');
         });
     </script>
 </body>
