@@ -6,7 +6,9 @@
 :root {
   --mainColor: #3f5620;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 * {
   padding: 0;
   margin: 0;
@@ -224,7 +226,7 @@ body {
   height: 50vh;
   display: flex;
   margin-top: 150px;
-  background-color: #f7f7f7;
+  background-color: rgb(245, 255, 244);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -442,26 +444,21 @@ select:valid ~ label {
 }
 .adsContainer {
   width: 100%;
-  overflow: hidden;
   height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
-  gap: 20px;
 }
 .card {
-  width: 500px;
-  height: 250px;
+  width: 300px;
+  height: 600px;
   box-shadow: whitesmoke 0px 7px 29px 0px;
   border-radius: 5px;
-  display: flex;
   cursor: pointer;
 }
 .card .thumbnail {
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 55%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -469,46 +466,55 @@ select:valid ~ label {
   justify-content: center;
   align-items: center;
   transition: 0.5s all;
+  position: relative;
 }
 
 .showMore {
-  width: 50%;
-  padding: 5px;
+  width: 90px;
+  padding: 3px;
+  font-size: small;
   border-radius: 5px;
   border: 2px solid var(--mainColor);
   background-color: var(--mainColor);
   color: white;
   cursor: pointer;
   transition: 0.5s all;
-  display: none;
-  box-shadow: 0 0 50px var(--mainColor);
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 .card .thumbnail:hover .showMore {
   display: block;
 }
-.showMore:hover {
-  background-color: transparent;
-  color: var(--mainColor);
-}
 
 .detailsCard {
-  width: 50%;
+  width: 100%;
+  height: 50%;
   direction: rtl;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   gap: 10px;
-  padding: 15px;
+  padding: 10px;
   position: relative;
   padding-right: 30px;
 }
+
 .detailsCard .type {
   color: var(--mainColor);
   font-size: medium;
 }
-.detailsCard .details {
+
+.mapPart {
   display: flex;
+  width: 100%;
+  gap: 10px;
+}
+.mapPart svg {
+  width: 25px;
+  color: var(--mainColor);
 }
 
 .detailsCard .name {
@@ -519,7 +525,8 @@ select:valid ~ label {
   color: var(--mainColor);
 }
 .price {
-  font-size: 20px;
+  font-size: 25px;
+  color: var(--mainColor);
 }
 .details {
   position: absolute;
@@ -544,7 +551,7 @@ select:valid ~ label {
   padding-left: 20px;
   padding-right: 20px;
   position: absolute;
-  bottom: 55%;
+  bottom: 35%;
 }
 .custom-nav button {
   height: 40px;
@@ -579,7 +586,70 @@ select:valid ~ label {
   box-shadow: 0 0 50px var(--mainColor);
 }
 
+.categorysSlides {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 250px;
+}
+.categorysSlides div {
+  width: 378px;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+}
+.categorysSlides div:hover {
+  background-size: 110%;
+}
+
+.categorysSlides div div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+@media (min-width: 1200px) {
+  .slideThumbnail4 {
+    width: 580px !important;
+    height: 422px !important;
+  }
+  .slideThumbnail5 {
+    width: 580px !important;
+    height: 422px !important;
+  }
+}
+
+.slideThumbnail1 {
+  background-image: url("./assets/R.jpg");
+}
+.slideThumbnail2 {
+  background-image: url("./assets/doctors.jpg");
+}
+.slideThumbnail3 {
+  background-image: url("./assets/trainer.jpg");
+}
+
+.slideThumbnail4 {
+  background-image: url("./assets/R\ \(2\).jpg");
+}
+.slideThumbnail5 {
+  background-image: url("./assets/R\ \(1\).jpg");
+}
+
 .startAd {
+  margin-top: 150px;
   width: 100%;
   height: 50vh;
   background-image: url(./assets/longSide.jpeg);
@@ -724,7 +794,7 @@ select:valid ~ label {
 .benifetSection {
   width: 100%;
   height: 60vh;
-  background-color: #f7f7f7;
+  background-color: rgb(245, 255, 244);
   margin-top: 100px;
 }
 .containerBenifetCards,
@@ -782,6 +852,8 @@ select:valid ~ label {
   color: white;
 }
 
+
+
 .processCard {
   width: 250px;
   display: flex;
@@ -799,48 +871,35 @@ select:valid ~ label {
   align-items: center;
   text-align: center;
 }
+
+
 .indecator {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height:40px;
+  border-radius: 10px;
   border: 3px solid var(--mainColor);
-  border-radius: 50%;
   display: flex;
+  background-color: var(--mainColor);
   justify-content: center;
   align-items: center;
   position: relative;
   font-size: 25px;
 }
+.indecator  svg{
+    color: white;
+    width: 30px
 
-.indecator::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -6px;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 5px solid transparent;
-  border-left: 5px solid var(--mainColor);
-  transform: rotate(-30deg);
-  -webkit-animation: rotate 1.1s infinite linear;
-  animation: rotate 1.1s infinite linear alternate;
-  box-sizing: content-box;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
+
+
 
 .testimonealSection {
   margin-top: 100px;
-  background-color: #f7f7f7;
+  background-color: rgb(245, 255, 244);
 }
-.numbersCards {
+.numbersCards,
+.teamCards {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -879,7 +938,7 @@ select:valid ~ label {
 .containerfq {
   padding: 4rem;
   width: 100%;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -911,9 +970,7 @@ select:valid ~ label {
 .accordion button:hover::after,
 .accordion button:focus::after {
   cursor: pointer;
-  color: var(
-    --mainColor
-  );
+  color: var(--mainColor);
   border: 1px solid var(--mainColor);
 }
 .accordion button .accordion-title {
@@ -973,3 +1030,240 @@ select:valid ~ label {
   font-weight: 300;
   margin: 2em 0;
 }
+
+.TeamSection {
+  background-color: rgb(245, 255, 244);
+  margin-top: 100px;
+}
+.teamSinglCard {
+  width: 300px;
+  height: 300px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+.teamSinglCard img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: 2px solid var(--mainColor);
+  aspect-ratio: 1/1;
+}
+
+
+
+  
+  .text-blk {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    line-height: 25px;
+  }
+  
+  .responsive-cell-block {
+    min-height: 75px;
+  }
+  
+  .responsive-container-block {
+    min-height: 75px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    justify-content: space-evenly;
+  }
+  
+  .outer-container {
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    background-color: rgb(245, 255, 244);
+  }
+  
+  .inner-container {
+    max-width: 1320px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+  }
+  
+  .section-head-text {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--mainColor);
+    margin: 0 0 10px 0;
+  }
+  
+  .section-subhead-text {
+    font-size: 25px;
+    color: rgb(153, 153, 153);
+    line-height: 35px;
+    max-width: 470px;
+    text-align: center;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 60px;
+    margin-left: 0px;
+  }
+  
+  .img-wrapper {
+    width: 100%;
+  }
+  
+  .team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-media-links {
+    width: 125px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .name {
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(102, 102, 102);
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+  }
+  
+  .position {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--mainColor);
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+  }
+  
+  .team-img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .team-card-container {
+    width: 280px;
+    margin: 0 0 40px 0;
+  }
+  
+  @media (max-width: 500px) {
+    .outer-container {
+      padding: 10px 20px 10px 20px;
+    }
+  
+    .section-head-text {
+      text-align: center;
+    }
+  }
+
+/* footer */
+.container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: #24262b;
+    padding: 70px 0;
+    direction: rtl; /* Right-to-left direction */
+  }
+  .footer-col{
+    width: 25%;
+    padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    background-color: var(--mainColor);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-right: 8px; /* Adjusting padding for RTL */
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
