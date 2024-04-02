@@ -1,4 +1,11 @@
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Remove the loader when the page is fully loaded
+    window.addEventListener("load", function () {
+      const loaderWrapper = document.getElementById("loader")
+      loaderWrapper.style.display = "none"
+    });
+});
 
 
 
